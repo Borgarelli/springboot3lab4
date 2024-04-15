@@ -1,6 +1,7 @@
 package br.gov.sp.fatec.springboot3lab4.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,13 @@ public class TrabalhoService {
         return repository.findAll();
     }
 
+    public Trabalho findById(Long id) {
+        Optional<Trabalho> trabalhoOp = repository.findById(id);
+        if(trabalhoOp.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trabalho not found");
+        } return trabalhoOp.get();
+
+    }
+    
     
 }
