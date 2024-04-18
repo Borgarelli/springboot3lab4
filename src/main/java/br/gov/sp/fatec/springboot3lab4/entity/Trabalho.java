@@ -35,7 +35,7 @@ public class Trabalho {
     private String group;
 
     @Column(name = "tra_nota")
-    private Long note;
+    private Long tra_nota;
 
     @Column(name = "tra_justificativa")
     private String justify;
