@@ -30,4 +30,9 @@ public class TrabalhoController {
         return service.findById(id);
     }
 
+    @GetMapping(value = "/note/{note}")
+    public List<Trabalho> getByNote(@PathVariable("note") Long note) {
+        return service.findByNote(note);
+    } 
+    
 }

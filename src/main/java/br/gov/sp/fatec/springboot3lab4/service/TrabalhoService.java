@@ -34,6 +34,10 @@ public class TrabalhoService {
         } return trabalhoOp.get();
 
     }
+
+    public List<Trabalho> findByNote(Long nota) {
+        return repository.findyTituloByNota(nota);
+    }
     
     
 }
