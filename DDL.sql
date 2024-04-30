@@ -52,6 +52,16 @@ create table tra_trabalho (
   tra_justificativa varchar(100)
 );
 
+create table alu_aluno(
+  alu_id bigint primary key auto_increment,
+  alu_nome_completo varchar(100) not null,
+  alu_email_institucional varchar(100) not null,
+  alu_data_matricula date not null,
+  alu_indice float
+);
+
+insert into alu_aluno (alu_nome_completo, alu_email_institucional, alu_data_matricula, alu_indice) values ('Charles Smith', 'csmith@email.com', curdate(), 7.2), ('Ann Doe', 'adoe@email.com', '2024-02-15', 6.3);
+
 insert into usr_usuario (usr_nome, usr_senha)
   values ('admin', '$2a$10$i3.Z8Yv1Fwl0I5SNjdCGkOTRGQjGvHjh/gMZhdc3e7LIovAklqM6C');
 insert into aut_autorizacao (aut_nome)
